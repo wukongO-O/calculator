@@ -43,8 +43,12 @@ const displayText = document.querySelector('#text');
 let display;
 let text = '';
 function displayNum(event) {
+    if (text.length < 11) {
     text += `${event.target.id}`;
     displayText.textContent = text;
+    } else {
+        displayText.textContent = 'Oops...too many #s.'
+    };
     return display = displayText.textContent;
 };
 
@@ -57,6 +61,8 @@ const buttons = document.querySelectorAll('button');
 nums.forEach((num) => {
     num.addEventListener('click', displayNum);
 });
+
+
 
 const operators = document.querySelectorAll('div.rbtns > button');
 let clickTimes = 0;
@@ -102,7 +108,7 @@ const ac = document.querySelector('.clear');
 ac.addEventListener('click',reset);
 
 function Neg() {
-    display = 0 - display;
+    display = - displayText.textContent;
     return displayText.textContent = display; 
 };
 
