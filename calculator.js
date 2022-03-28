@@ -62,8 +62,6 @@ nums.forEach((num) => {
     num.addEventListener('click', displayNum);
 });
 
-
-
 const operators = document.querySelectorAll('div.rbtns > button');
 let clickTimes = 0;
 operators.forEach((o) => {
