@@ -55,6 +55,7 @@ button {
     border: 2px solid rgb(92, 91, 91);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: #798777;  
+    text-align: center;
 }
 button:hover {
     background-color: #bdd2b6;
